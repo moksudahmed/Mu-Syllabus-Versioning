@@ -1,8 +1,8 @@
 // api url
-
-const api_url = 
-      "https://jsonplaceholder.typicode.com/todos";
-  
+const syllabusCode = 'CSE-V5';
+const api_url2 = 
+      `http://77.68.120.8:1337/moduleist?id=${syllabusCode}`;
+  console.log(api_url2);
 // Defining async function
 async function getapi(url) {
     

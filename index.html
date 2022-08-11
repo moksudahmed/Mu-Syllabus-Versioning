@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>  
-    <script src="syllabuscode.js"></script>  
-    <script src="modulecode.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+    <script src="syllabuscode.js"></script>
+    <!--<script src="modulecode.js"></script>  -->
     <title>Document</title>
 </head>
 <body>
@@ -22,43 +23,45 @@
             <form>
                 <div id="syllabus-code"></div>
                 <div id="module-code"></div>
-
-                <div class="module-name">
+                <div id = "demo"></div>
+                <div class="text-field">
                     <label>Module Name</label>
-                    <input type="text" value="">
+                    <input type="text" id="module-name" value="" onchange="getUpdateName(this.value)">
                 </div>
 
-                <div class="credit-hour">
+                <div class="text-field">
                     <label>Credit Hour</label>
-                    <input type="number" value="">
+                    <input type="number" id="credit-hour" value=""  onchange="getCreditHour(this.value)">
                 </div>
 
-                <div class="module-type">
+                <div class="text-field">
                     <label>Module Type</label>
-                    <input type="radio" id="lab" name="lab" value="Lab">
+                    <input type="radio" id="lab" name="lab" value="Lab"  onclick="changeModuleTypeYes()">
                     <label for="html">Lab</label><br>
-                    <input type="radio" id="nonlab" name="nonlab" value="None Lab">
+                    <input type="radio" id="nonlab" name="nonlab" value="None Lab" onclick="changeModuleTypeNo()">
                     <label for="html">None Lab</label><br>
                 </div>
-                <div class="lab-included">
-                    <label>Lab Included</label>
-                    <input type="radio" id="yes" name="yes" value="Yes">
+                <div class="text-field">
+                    <label>Major</label>
+                    <input type="radio" id="major" name="major" value="Yes" onclick="changeMajor()">
                     <label for="html">Yes</label><br>
-                    <input type="radio" id="no" name="no" value="No">
+                    <input type="radio" id="nonmajor" name="nonmajor" value="No" onclick="changeNonMajor()">
                     <label for="html">No</label><br>
                 </div>
-                <div class="gorup">
-                    <label>Group</label>
-                    <select>
-                        <option>Core</option>
-                        <option>GED</option>
-                        <option>Math</option>
-                        <option>Marketing</option>
-                    </select>
+
+                <div class="text-field">
+                    <label>Lab Included</label>
+                    <input type="radio" id="lab-included-yes" name="lab-included-yes" value="Yes" onclick="changeLabInclude()">
+                    <label for="html">Yes</label><br>
+                    <input type="radio" id="lab-included-no" name="lab-included-no" value="No" onclick="changeLabNotInclude()">
+                    <label for="html">No</label><br>
                 </div>
+                <div id="group">                    
+                </div>                
                 <div id="employees"></div>
                 <div>
-                    <input type="submit" value="Update">
+                    <!--<input type="submit" value="Update" onclick="updateData()">-->
+                    <button onclick="updateData()">Update</button>
                 </div>
             </form>
         </div>

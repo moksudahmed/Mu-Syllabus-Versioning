@@ -1,0 +1,23 @@
+{
+  "name": "mu-syllabus",
+  "version": "1.0.0",
+  "description": "Curriculum Versioning Enhancements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moksudahmed/mu-syllabus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moksudahmed/mu-syllabus/issues"
+  },
+  "homepage": "https://github.com/moksudahmed/mu-syllabus#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
