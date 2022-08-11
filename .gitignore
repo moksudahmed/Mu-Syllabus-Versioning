@@ -1,2 +1,3 @@
-API_URL = "http://77.68.120.8:1337/"
+node_modules/
+api.js
 
