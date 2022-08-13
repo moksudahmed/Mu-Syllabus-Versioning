@@ -1,6 +1,6 @@
 // api url
 const api_url = 
-      "http://77.68.120.8:1337/syllabuslist";
+      "/syllabuslist";
 var moduleData = [];
 var syllabusCode ='';  
 var moduleCode ='';
@@ -35,7 +35,7 @@ getapi(api_url);
 async function getModuleCode() {
     const syllabus = document.getElementById("selectedSyllabusCode").value;
   
-    const url = `http://77.68.120.8:1337/moduleist?id=${syllabus}`;
+    const url = `/moduleist?id=${syllabus}`;
   
     // Storing response
     const response = await fetch(url);
@@ -237,7 +237,7 @@ const updateData = () =>{
 function updateSyllabus(obj){
 
     const xhr = new XMLHttpRequest();
-    xhr.open('PUT', 'http://77.68.120.8:1337/moduleupdate', true);
+    xhr.open('PUT', '/moduleupdate', true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     xhr.onreadystatechange = () => { // Call a function when the state changes.
